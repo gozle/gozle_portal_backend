@@ -36,6 +36,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     # 3rd party
     'rest_framework',
+    'drf_spectacular',
     # my apps
     'authentication'
 ]
@@ -113,6 +114,12 @@ AUTH_PASSWORD_VALIDATORS = [
 AUTH_USER_MODEL = 'authentication.User'
 
 
+# Rest Framework settings
+REST_FRAMEWORK = {
+    "DEFAULT_SCHEMA_CLASS": "drf_spectacular.openapi.AutoSchema",
+}
+
+
 # Internationalization
 # https://docs.djangoproject.com/en/4.1/topics/i18n/
 
@@ -137,6 +144,16 @@ MEDIA_URL = 'media/'
 # https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+
+# DRF Spectacular settingd
+SPECTACULAR_SETTINGS = {
+    'TITLE': 'Gozle Portal API',
+    'DESCRIPTION': 'Gozle Protal is a project where you can write your articles.',
+    'VERSION': PROJECT_VERSION,
+    'SERVE_INCLUDE_SCHEMA': False,
+}
+
 
 # Session to cache
 SESSION_ENGINE = "django.contrib.sessions.backends.cache"
