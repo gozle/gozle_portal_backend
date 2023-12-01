@@ -14,6 +14,19 @@ ALLOWED_HOSTS = ["*"]
 CORS_ORIGIN_ALLOW_ALL = True
 
 
+# Caches
+CACHES = {
+    "default": {
+        "BACKEND": "django_redis.cache.RedisCache",
+        "LOCATION": BROKER_URL,
+        "OPTIONS": {
+            "CLIENT_CLASS": "django_redis.client.DefaultClient",
+            "KEY_PREFIX": "gozle_ads:"
+        },
+    }
+}
+
+
 # Django Debug Toolbar
 try:
     import debug_toolbar
