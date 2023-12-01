@@ -104,6 +104,11 @@ AUTH_PASSWORD_VALIDATORS = [
 ]
 
 
+# My custom Auth User Model
+
+AUTH_USER_MODEL = 'authentication.User'
+
+
 # Internationalization
 # https://docs.djangoproject.com/en/4.1/topics/i18n/
 
