@@ -1,0 +1,7 @@
+venv/
+.env
+*__pycache__
+.gitignore.swp
+.DS_Store
+dump.rdb
+db.sqlite3
