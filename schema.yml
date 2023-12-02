@@ -1,0 +1,7 @@
+openapi: 3.0.3
+info:
+  title: Gozle Portal API
+  version: 0.0.1
+  description: Gozle Protal is a project where you can write your articles.
+paths: {}
+components: {}
