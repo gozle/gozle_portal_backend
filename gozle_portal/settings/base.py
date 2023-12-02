@@ -37,6 +37,7 @@ INSTALLED_APPS = [
     # 3rd party
     'rest_framework',
     'drf_spectacular',
+    'drf_spectacular_sidecar',
     # my apps
     'authentication'
 ]
@@ -152,6 +153,9 @@ SPECTACULAR_SETTINGS = {
     'DESCRIPTION': 'Gozle Protal is a project where you can write your articles.',
     'VERSION': PROJECT_VERSION,
     'SERVE_INCLUDE_SCHEMA': False,
+    'SWAGGER_UI_DIST': 'SIDECAR',  # shorthand to use the sidecar instead
+    'SWAGGER_UI_FAVICON_HREF': 'SIDECAR',
+    'REDOC_DIST': 'SIDECAR',
 }
 
 
