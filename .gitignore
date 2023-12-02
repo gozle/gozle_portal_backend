@@ -6,3 +6,4 @@ venv/
 dump.rdb
 db.sqlite3
 scripts/
+media/
